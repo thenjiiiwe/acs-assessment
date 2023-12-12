@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# acs-assessment
+A simple React application featuring a user-friendly contact form with phone number validation. The form includes fields for name, country code, and phone number. Built with React, Bootstrap, and Zod for validation.
 
-## Getting Started
+# Contact Form React App
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a simple React application that provides a contact form with phone number validation. The form includes fields for the user's name, country code, and phone number. Phone number validation is performed using the `react-input-mask` library and the `zod` validation schema.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Before running the project locally, ensure that you have the following prerequisites installed on your machine:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Node.js: [https://nodejs.org/](https://nodejs.org/)
+- npm (Node Package Manager): It is included with Node.js.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository to your local machine.
 
-## Learn More
+    ```bash
+    git clone https://github.com/your-username/contact-form-react-app.git
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    cd contact-form-react-app
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Install project dependencies.
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Running the Application Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Start the development server.
+
+    ```bash
+    npm start
+    ```
+
+2. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+3. The contact form should be visible on the page, allowing you to interact with the form.
+
+## Usage
+
+1. **Name Field**: Enter your name in the provided text field.
+
+2. **Tel Field**:
+   - **Country Code Selector**: Choose your country code from the dropdown menu.
+   - **Phone Number Input**: Enter your phone number with the provided mask (99-999-9999).
+
+3. **Validation Feedback**:
+   - If there is a validation error, a red error message will be displayed.
+   - If the phone number is valid, a green checkmark will be displayed.
+
+4. **Submit Button**: Click the "Submit" button to log the form data to the console (in a real application, this is where you would handle form submission logic).
+
+## Project Structure
+
+- **src/components/ContactForm.js**: React component containing the contact form.
+- **src/data/africanCountryCodes.js**: Array of African country codes and labels.
+- **src/validation/schema.js**: Zod validation schema for phone numbers.
+- **public/**: Static assets and HTML template.
+
+## Dependencies
+
+- **React**: JavaScript library for building user interfaces.
+- **react-input-mask**: Input masking library for React.
+- **zod**: TypeScript-first schema declaration and validation library.
+
+## Additional Notes
+
+- This project uses Bootstrap for styling. Feel free to customize the styling based on your requirements.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
